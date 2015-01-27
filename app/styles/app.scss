@@ -11,6 +11,7 @@ html, body {
 main {
   max-width: 960px;
   margin: 25px auto;
+  overflow: hidden;
 }
 
 section.input {
@@ -65,4 +66,27 @@ section.notes {
   color: #fff;
   padding: 5px;
   border: 1px solid #fff
+}
+
+header {
+  clear: both;
+  overflow: hidden;
+  padding: 10px;
+  .brand {
+    float: left;
+    display: inline-block;
+  }
+  .flash_messages-success {
+    float: right;
+    display: inline-block;
+    height: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    color: #3f8b44;
+    background: #6beb6d;
+    text-align: center;
+    span {
+      display: none;
+    }
+  }
 }
