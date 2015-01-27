@@ -11,6 +11,7 @@
   {{#each note in model}}
     <div class='note'>
       {{note.body}}
+      <button class="delete-button" {{action 'deleteNote' note.id}}>Delete</button>
     </div>
   {{/each}}
 </section>
