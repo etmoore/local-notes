@@ -1,9 +1,13 @@
-
 <section class='input'>
-  {{textarea placeholder="Add a note!" class="input-body"
-    value=noteCopy action='newNote' autofocus='true'}}
+  <div class='input-text'>
+    {{input placeholder="Note Title" class="input-title"
+      value=noteTitle autofocus='true'}}
+    {{textarea placeholder="Add a note!" class="input-body"
+      value=noteBody action='newNote'}}
+  </div>
   <div class='input-preview'>
-    {{noteCopy}}
+    <h1>{{noteTitle}}</h1>
+    <p>{{noteBody}}</p>
   </div>
 </section>
 
@@ -11,7 +15,8 @@
   {{#each note in model}}
     <div class='note'>
       <button class="delete-button" {{action 'deleteNote' note.id}}>Delete</button>
-      {{note.body}}
+      <h1>{{note.title}}</h1>
+      <p>{{note.body}}</p>
     </div>
   {{/each}}
 </section>
