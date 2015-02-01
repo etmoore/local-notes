@@ -10,8 +10,11 @@ export default Ember.ArrayController.extend({
       this.set('noteBody', '');
       note.save();
     },
-    flashDeleteNote: function() {
-      this.flashMessage('success', 'Note successfully deleted.');
+    deleteNote: function(note) {
+      var controller = this;
+      note.destroyRecord().then(function() {
+        controller.flashMessage('success', 'Note successfully deleted.');
+      });
     }
   }
 });

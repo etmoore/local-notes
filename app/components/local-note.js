@@ -6,9 +6,7 @@ export default Ember.Component.extend({
 
   actions: {
     deleteNote: function(note) {
-      note.deleteRecord();
-      note.save();
-      this.sendAction('flashDeleteNote');
+      this.sendAction('deleteNote', note);
     }
   }
 });
