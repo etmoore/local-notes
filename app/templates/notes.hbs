@@ -13,11 +13,7 @@
 
 <section class='notes'>
   {{#each note in model}}
-    <div class='note'>
-      <button class="delete-button" {{action 'deleteNote' note.id}}>Delete</button>
-      <h1>{{note.title}}</h1>
-      <p>{{note.body}}</p>
-    </div>
+    {{local-note note=note}}
   {{/each}}
 </section>
 
