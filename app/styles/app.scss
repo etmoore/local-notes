@@ -108,17 +108,14 @@ header {
     float: left;
     display: inline-block;
   }
-  .flash-messages-success {
-    float: right;
-    display: inline-block;
-    height: 100%;
-    padding: 10px;
-    border-radius: 3px;
-    color: #3f8b44;
-    background: #6beb6d;
-    text-align: center;
-    span {
-      display: none;
-    }
+  .flash_messages-success {
+      background: #93DE7F;
+      text-align: left;
+      padding: 5px;
+      border-radius: 3px;
+      float: right
+  }
+  .flash_messages-success span {
+      display: none
   }
 }
